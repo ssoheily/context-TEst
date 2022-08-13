@@ -5,12 +5,12 @@ export default function Navbar() {
   return (
     <nav className="navbar navbar-expand-sm  py-3 d-flex">
       <div className="container">
-        <a href="#" className="navbar-brand">
-          sam.soheil-Shop
+        <a href="#" id="navbar-brand" >
+          samsoheiShop
         </a>
-        <ul className="navbar-nav me-auto-me-3">
+        <ul className="navbar-nav me-auto me-3">
           <li className="nav-item">
-            <a href="#  " className="nav-link">
+            <a href="#" className="nav-link">
                 Home
             </a>
           </li>
@@ -25,3 +25,5 @@ export default function Navbar() {
     </nav>
   );
 }
+
+/*  */
