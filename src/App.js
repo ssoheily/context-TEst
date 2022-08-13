@@ -1,9 +1,12 @@
 import React from "react";
 import Navbar from "./Component/Navbar/Navbar";
 import ProductsSection from "./Component/ProductsSection/ProductsSection";
+import products from "./data/product"
 import "./App.css";
+import { useState } from "react";
 
 export default function App() {
+  const [allProducts, setAllProducts]=useState(products)
   return (
     <div className="test">
       <Navbar />
@@ -11,10 +14,10 @@ export default function App() {
       <main className="pb-5">
         <div className="container">
           <h1 className="text-center main-title">All Products</h1>
-          <ProductsSection title="Phone" />
-          <ProductsSection title="Laptop" />
-          <ProductsSection title="Monitor" />
-          <ProductsSection title="Tablet" />
+          {allProducts.map(product=>(
+            <ProductsSection {...product } />
+          ))}
+      
         </div>
       </main>
     </div>
