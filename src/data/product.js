@@ -5,7 +5,7 @@ const products = [
       {
         id: 1,
         title: "Samsung A53",
-        img: "/images/1.jpg",
+        img: "/images/item-1.jpeg",
         price: 12_000_000,
         count: 34,
       },

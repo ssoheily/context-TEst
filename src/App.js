@@ -5,6 +5,7 @@ import products from "./data/product"
 import "./App.css";
 import { useState } from "react";
 import Toast from "./Component/Toast/Toast";
+import Cart from "./Component/Cart/Cart";
 export default function App() {
   const [allProducts, setAllProducts]=useState(products)
   return (
@@ -21,6 +22,7 @@ export default function App() {
         </div>
       </main>
       <Toast></Toast>
+      <Cart></Cart>
     </div>
   );
 }
