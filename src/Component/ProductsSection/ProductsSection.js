@@ -8,20 +8,20 @@ export default function ProductsSection({title,infos}) {
       <h3 className="text-center">{title}</h3>
       {/* now show product */}
       {
-        infos.map(info=>(
+        infos.map(product=>(
 
           <div className="col-xl-3 col-lg-4 col-md-5 col-sm-10 mt-5">
           <div className="card py-3 px-3">
             <div className="col-12 text-center">
-              <img src="/images/item-1.jpeg" alt="product Image" className="card-img-top w-75 " />
+              <img src={product.img} alt="product Image" className="card-img-top w-75 imgProduct" />
             </div>
-             <div className=" card-body text-center">
-              <p className="card-text">{info.title}</p>
-              <p className="price">{info.price}</p>
+             <div className="card-body text-center">
+              <p className="card-text">{product.title}</p>
+              <p className="price">{product.price}</p>
               <br />
               <a href="#" className="btn btn-danger">Add To Cart</a>
               <a href="#" className="btn btn-outline-dark mt-3 text-capitalize"> More Information</a>
-             <p className="number">{info.count} </p>
+             <p className="number">{product.count} </p>
              </div> 
           </div>
         </div>
@@ -48,3 +48,4 @@ export default function ProductsSection({title,infos}) {
     </div>
   );
 }
+

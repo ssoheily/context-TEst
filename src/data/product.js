@@ -5,7 +5,7 @@ const products = [
       {
         id: 1,
         title: "Samsung A53",
-        img: "/images/item-1.jpeg",
+        img: "/images/1.jpg",
         price: 12_000_000,
         count: 34,
       },
@@ -19,7 +19,7 @@ const products = [
       {
         id: 3,
         title: "Samsung A72",
-        img: "/images/item-3.jpeg",
+        img: "/images/item-6.jpeg",
         price: 14_000_000,
         count: 9,
       },
