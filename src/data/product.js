@@ -1,6 +1,6 @@
 const products = [
   {
-    title: "Phones",
+    title: "breakfast",
     infos: [
       {
         id: 1,
@@ -12,7 +12,7 @@ const products = [
       {
         id: 2,
         title: "Nokia Xz3",
-        img: "/images/item-2.jpeg",
+        img: "/images/item-4.jpeg",
         price: 2_000_000,
         count: 120,
       },
@@ -26,12 +26,12 @@ const products = [
     ],
   },
   {
-    title: "Laptops",
+    title: "Lunch",
     infos: [
       {
         id: 1,
         title: "Acer Aspire",
-        img: "/images/item-4.jpeg",
+        img: "/images/item-2.jpeg",
         price: 4_000_000,
         count: 18,
       },
