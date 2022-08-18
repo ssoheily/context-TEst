@@ -22,7 +22,7 @@ export default function Cart() {
          </h3>
          <div className="row bag-wrapper">
           {contextData.userCart.map(product=>(
-            <div className="col-12 mt-5" key={product.key}>
+            <div className="col-12 mt-5" key={product.key} >
                 <div className="ca rd py-3 px-3">
                     <div className="col-12 text-center">
                         <img src="/images/item-6.jpeg" alt="product photo" className='cart-img-top w-75 '/>
