@@ -12,9 +12,9 @@ import productsContext from "./Context/Productscontext";
 export default function App() {
   /* 3- create state */
   const [allProducts, setAllProducts] = useState(products);
-  const [userCart, setUserCart] = useState([])
+  const [userCart, setUserCart] = useState([])/* cart fom user to add product-user */
   const [isShowToast, setIsShowToast] = useState(false)
-  const [isShowCart, setIsShowCart] = useState(true)
+  const [isShowCart, setIsShowCart] = useState(false)
   return (
     <div className="test">
       {/* 4- create Tag  <productsContext.Provider  ,then define state varaible */}
