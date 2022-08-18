@@ -15,9 +15,7 @@ export default function Cart() {
                 Bag
             </span>
             <span>
-                <AiOutlineClose className='close-icon' onClick={()=>{
-                  contextData.setIsShowCart(false)
-                }}> </AiOutlineClose>
+                <AiOutlineClose className='close-icon' onClick={()=> contextData.setIsShowCart(false) }/>
             </span>
          </h3>
          <div className="row bag-wrapper">

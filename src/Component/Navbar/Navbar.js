@@ -20,7 +20,7 @@ export default function Navbar() {
         </ul>
         <div className="bag-box">
             <a href="#" className="bag">
-                <BsBag  className ="text-white" onClick={()=>{contextData.setIsShowCart(true)}} />
+                <BsBag  className ="text-white" onClick={()=>contextData.setIsShowCart(true)} />
                 <span className="bag-products-counter">0</span>
             </a>
         </div>

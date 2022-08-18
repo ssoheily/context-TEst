@@ -7,6 +7,40 @@ export default function ProductsSection() {
   /* 6- here define variable for context  */
   const contextData = useContext(productsContext);
 
+  const addToCart = (product) => {
+    contextData.setIsShowToast(true);
+
+    setTimeout(() => {
+      contextData.setIsShowToast(false);
+    }, 3000);
+
+    let isInUserCart = contextData.userCart.some(
+      (bagProduct) => bagProduct.title === product.title
+    );
+    if (!isInUserCart) {
+      let newUserCardProduct = {
+        id: contextData.userCart.length + 1,
+        title: product.title,
+        price: product.price,
+        count: 1,
+      };
+
+      contextData.setUserCart((prevProduct) => [
+        ...prevProduct,
+        newUserCardProduct,
+      ]);
+    } else {
+      let userCart = [...contextData.userCart];
+      userCart.some((bagProduct) => {
+        if (bagProduct.title === product.title) {
+          bagProduct.count++;
+          return true;
+        }
+        contextData.setUserCart(userCart);
+      });
+    }
+  };
+
   return (
     <>
       {/* 7- use state from productSection ,here and map for this " productSection " */}
@@ -35,42 +69,7 @@ export default function ProductsSection() {
                   <a
                     href="javascript:void(0)"
                     className="btn btn-danger"
-                    onClick={() => {
-                      contextData.setIsShowToast(true);
-
-                      setTimeout(() => {
-                        contextData.setIsShowToast(false);
-                      }, 3000);
-
-                      let isInUserCart = contextData.userCart.some(
-                        (bagProduct) => bagProduct.title === product.title
-                      );
-                      if(!isInUserCart){
-                        let newUserCardProduct = {
-                          id: contextData.userCart.length + 1,
-                          title: product.title,
-                          price: product.price,
-                          count: 1,
-                        };
-  
-                        contextData.setUserCart((prevProduct) => [
-                          ...prevProduct,
-                          newUserCardProduct,
-                        ]);
-                      }
-                      else{
-
-                        let userCart =  [...contextData.userCart]
-                        userCart.some(bagProduct=>{
-                          if(bagProduct.title===product.title){
-                            bagProduct.count++;
-                            return true;
-                          }
-                          contextData.setUserCart(userCart);
-                        })
-                      }
-                     
-                    }}
+                    onClick={() => addToCart(product)}
                   >
                     Add To Cart
                   </a>
